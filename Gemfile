@@ -17,3 +17,5 @@ group :development do
   gem 'rack-livereload'
 end
 
+
+gem "rackup", "~> 2.2"

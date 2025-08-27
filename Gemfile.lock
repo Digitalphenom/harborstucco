@@ -43,6 +43,8 @@ GEM
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
+    rackup (2.2.1)
+      rack (>= 3)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     sinatra (4.1.1)
@@ -76,6 +78,7 @@ DEPENDENCIES
   pry-byebug
   puma
   rack-livereload
+  rackup (~> 2.2)
   sinatra
   sinatra-contrib
 
