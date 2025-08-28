@@ -18,9 +18,5 @@ end
 # ‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧
 
 get '/' do
-  redirect '/home'
-end
-
-get '/home' do
   erb :"home.html", layout: :"layout.html"
 end
