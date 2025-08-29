@@ -6,6 +6,7 @@ GEM
     builder (3.3.0)
     byebug (12.0.0)
     coderay (1.1.3)
+    erubi (1.13.1)
     logger (1.7.0)
     method_source (1.1.0)
     minitest (5.25.5)
@@ -72,6 +73,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  erubi
   minitest
   minitest-reporters
   pg

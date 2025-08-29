@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem 'sinatra'
+gem 'erubi'
 gem 'sinatra-contrib'
 gem 'pry-byebug'
 gem 'pg'
