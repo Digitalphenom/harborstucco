@@ -20,3 +20,12 @@ end
 get '/' do
   erb :"home.html", layout: :"layout.html"
 end
+
+get '/estimate' do
+  erb :"estimate.html", layout: :"layout.html"
+end
+
+get %r{/(.+)\.html} do
+  path = params['captures'].first
+  redirect "/#{path}", 301
+end
