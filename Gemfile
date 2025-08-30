@@ -16,7 +16,9 @@ gem 'minitest-reporters'
 ruby '3.2.2'
 group :development do
   gem 'rack-livereload'
+  gem 'guard-livereload'
 end
-
+gem 'guard'
 
 gem "rackup", "~> 2.2"
+

@@ -2,7 +2,6 @@
 require 'bundler/setup'
 require 'sinatra/base'
 require 'sinatra/content_for'
-require 'sinatra/reloader'
 require 'rack-livereload'
 
 require_relative 'app/helpers/view_helpers.rb'
@@ -17,8 +16,16 @@ class HarborStucco < Sinatra::Base
   helpers ViewHelpers
 
   configure do
-    use Rack::LiveReload
     enable :sessions
+    if settings.environment? == :development
+      require 'sinatra/reloader'
+      also_reload "app/**/*.rb"
+    end
+
+    use Rack::LiveReload,
+      min_delay: 500,
+      max_delay: 10_000,
+      no_swf: true
   end
 
   get '/' do
