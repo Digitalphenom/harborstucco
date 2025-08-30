@@ -1,18 +1,20 @@
 
 require 'bundler/setup'
-require 'erubi'
 require 'sinatra/base'
 require 'sinatra/content_for'
 require 'sinatra/reloader'
 require 'rack-livereload'
 
+require_relative 'app/helpers/view_helpers.rb'
 # ‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧
 
 class HarborStucco < Sinatra::Base
   set :session_secret, SecureRandom.hex(32)
   set :public_folder, File.expand_path('../harbor_stucco/public', __dir__)
   set :views, File.expand_path('../harbor_stucco/views', __dir__)
-  #set :erb, escape_html: true
+  set :erb, escape_html: true
+  helpers Sinatra::ContentFor
+  helpers ViewHelpers
 
   configure do
     use Rack::LiveReload
