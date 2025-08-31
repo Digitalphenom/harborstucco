@@ -19,7 +19,7 @@ class HarborStucco < Sinatra::Base
     enable :sessions
     if settings.environment? == :development
       require 'sinatra/reloader'
-      also_reload "app/**/*.rb"
+      also_reload "app/helpers/*.rb"
     end
 
     use Rack::LiveReload,
@@ -34,6 +34,10 @@ class HarborStucco < Sinatra::Base
 
   get '/estimate' do
     erb :"estimate.html", layout: :"layout.html"
+  end
+  
+  get '/stuccorepair' do
+    erb :"stuccorepair", layout: :"layout.html"
   end
 
   get %r{/(.+)\.html} do
