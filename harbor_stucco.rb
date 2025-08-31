@@ -37,7 +37,7 @@ class HarborStucco < Sinatra::Base
   end
   
   get '/stuccorepair' do
-    erb :"stuccorepair", layout: :"layout.html"
+    erb :"stuccorepair.html", layout: :"layout.html"
   end
 
   get %r{/(.+)\.html} do
