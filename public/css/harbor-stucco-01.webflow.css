@@ -16,7 +16,7 @@ h3 {
   font-size: 28px;
   line-height: 30px;
   font-weight: 700;
-  text-transform: capitalize;
+  
 }
 
 h5 {
@@ -3711,8 +3711,7 @@ figure {
 }
 
 .paragraph-14 {
-  width: 100%;
-  padding-right: 0px;
+  width: 70%;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   text-align: center;
