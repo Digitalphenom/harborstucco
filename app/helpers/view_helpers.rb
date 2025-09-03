@@ -14,4 +14,10 @@ module ViewHelpers
     path = File.join(File.expand_path('../../views/meta/', __dir__), file)
     File.exist?(path) ? File.read(path) : ""
   end
+
+  def load_cta
+    file = 'cta.html.erb'
+    path = File.join(File.expand_path('../../views/', __dir__), file)
+    File.read(path)
+  end
 end
