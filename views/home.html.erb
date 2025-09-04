@@ -11,14 +11,15 @@
     <section id="AboutUs" class="div-block">
         <h2 class="subheroheading">Your Go-to Stucco Repair Specialists</h2>
       <p class="paragraph tabletadjustment">For over ten years, Harbor Stucco has mastered the craft of personalized stucco finish for your residential or commercial projects.<br>‍<br>We provide a wide selection of finishes suited for all your project needs. We&#x27;ll help you prepare, plan and implement your residential or commercial project.<br>‍<br>Our specialized team will work on perfecting your project with a high degree of care and quality. Whether you need stucco repair or just want to give your place a &quot;fresh look&quot;, weve got you covered.</p>  
+
   <!-- begin reviews -->
       <%== yield %>
   <!-- end -->
+
     </section>
   </div>
   <br>
   <br>
-
   <section id="cards-section" class="servicesection wf-section">
     <div class="centered-container sectionmobileadjustment w-container">
       <!-- begin services section-->
@@ -75,10 +76,11 @@
       <!-- end services section-->
     </div>
   </section>
-  
+
     <!-- call to action section -->
     <%== load_cta %>
     <!-- end -->
+
   <section id="FAQ" class="faq wf-section">
     <div class="container-6 w-container">
       <div class="div-block-44">
@@ -106,58 +108,34 @@
       </div>
     </div>
   </section>
-  <div class="texturessection wf-section">
-    <div class="div-block-12">
+
+  <section class="texturessection wf-section">
+    <header class="div-block-12">
       <h2 class="heading-34">StuccoTextures</h2>
       <h3 class="heading-25">Your Finishing options</h3>
       <p class="stucco-texture">When tasked with picking one of the various <strong class="bold-text">stucco texture</strong> finishing options, homeowners have no idea what options are available. <br><br>There are various stucco textures to choose from, each with its unique character. Some are best used for commercial projects, while others are best for sophisticated urban homes. Stucco texture offers a sense of individuality that will undoubtedly allow you to stand out in a sea of sameness.<br><br>To help you choose the right stucco texture, here are several of the most popular options, Click to learn more.<br><br></p>
-    </div>
+    </header>
+    <!-- texture finishes -->
     <div class="container w-container">
       <div class="div-block-8">
-        <div class="row1">
-          <div class="div-block-9">
-            <h4 class="heading-24">SMOOTH FINISH</h4><img src="images/smooth-finish.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 33vw, (max-width: 991px) 160px, 234px" srcset="images/smooth-finish-p-500.png 500w, images/smooth-finish.png 676w" alt="Smooth finish" class="image-4">
+        <% display_finishes() do |row, num|  %>
+          <div class="row<%== num %>">
+            <%== row.join %>
           </div>
-          <div class="div-block-9">
-            <h4 class="heading-24">SANTA BARBARA</h4><img src="images/monterey-finish.jpg" loading="lazy" alt="Santa Barbara finish" class="image-4">
-          </div>
-          <div class="div-block-9 mobiletexturehide">
-            <h4 class="heading-24">ARIZONA FINISH</h4><img src="images/arizona-finish.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 160px, 234px" srcset="images/arizona-finish-p-500.png 500w, images/arizona-finish.png 677w" alt="Arizona finish" class="image-4">
-          </div>
-        </div>
-        <div class="row2">
-          <div data-w-id="7074e3d7-a179-90ec-3eca-2e070dac3d6a" class="div-block-9">
-            <h4 class="heading-24">CAT FACE</h4><img src="images/cat-face.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 33vw, (max-width: 991px) 160px, 234px" srcset="images/cat-face-p-500.png 500w, images/cat-face.png 677w" alt="Cat face finish" class="image-4">
-          </div>
-          <div class="div-block-9">
-            <h4 class="heading-24">MONTEREY</h4><img src="images/monterey-finish-2.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 33vw, (max-width: 991px) 160px, 234px" srcset="images/monterey-finish-2-p-500.png 500w, images/monterey-finish-2.png 677w" alt="Monterey finish" class="image-4">
-          </div>
-          <div class="div-block-9 mobiletexturehide">
-            <h4 class="heading-24">TROWEL SWEEP</h4><img src="images/trowel-sweep-stucco-finish.jpg" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 160px, 234px" srcset="images/trowel-sweep-stucco-finish-p-500.jpeg 500w, images/trowel-sweep-stucco-finish.jpg 677w" alt="Trowel Sweep Texture" class="image-4">
-          </div>
-        </div>
-        <div class="row3">
-          <div class="div-block-9">
-            <h4 class="heading-24">SPANISH FINISH</h4><img src="images/spanish-finish-2-min.png" loading="lazy" srcset="images/spanish-finish-2-min-p-500.png 500w, images/spanish-finish-2-min.png 677w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 33vw, (max-width: 991px) 160px, 234px" alt="Spanish Finish" class="image-4">
-          </div>
-          <div class="div-block-9">
-            <h4 class="heading-24">FINE SAND</h4><img src="images/fine-sand-finish.jpg" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 33vw, (max-width: 991px) 160px, 234px" srcset="images/fine-sand-finish-p-500.jpeg 500w, images/fine-sand-finish.jpg 677w" alt="Fine Sand finish" class="image-4">
-          </div>
-          <div class="div-block-9 mobiletexturehide">
-            <h4 class="heading-24">English Finish</h4><img src="images/english-stucco-finish2.png" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 160px, 234px" srcset="images/english-stucco-finish2-p-500.png 500w, images/english-stucco-finish2.png 677w" alt="English Finish" class="image-4">
-          </div>
-        </div>
+        <% end %>
         <div class="buttoncontainer">
           <a href="/stuccorepair" target="_blank" class="button w-button">Learn More</a>
         </div>
       </div>
+    <!-- end textures -->
     </div>
-  </div>
-  <div class="close wf-section">
+  </section>
+
+  <article class="close wf-section">
     <div data-w-id="7a2acd72-a9a9-b0b0-c880-be9ce10c3aff" style="opacity:0" class="container-5 w-container">
       <h2 class="bottomctadesktop"><span class="text-span-18">Ready To Get Your</span> <br>Project Started?</h2>
       <h2 class="heading-23"><span class="text-span-18">Ready To Get Your</span> <br>Project Started?</h2>
       <a href="/estimate" target="_blank" class="button-2 bottomadjustment w-button">Get My Estimate</a>
     </div>
-  </div>
+  </article>
 </main>
