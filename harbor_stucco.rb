@@ -14,13 +14,14 @@ class HarborStucco < Sinatra::Base
   set :erb, escape_html: true
   helpers Sinatra::ContentFor
   helpers ViewHelpers
+  enable :sessions
 
-  configure do
-    enable :sessions
-    if settings.environment? == :development
-      require 'sinatra/reloader'
-      also_reload "app/helpers/*.rb"
-    end
+  configure :development do
+    require 'sinatra/reloader'
+    register Sinatra::Reloader
+
+    also_reload "app/helpers/view_helpers.rb"
+    also_reload "harbor_stucco.rb"
 
     use Rack::LiveReload,
       min_delay: 500,
