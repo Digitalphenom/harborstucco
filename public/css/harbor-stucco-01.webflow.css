@@ -5262,6 +5262,7 @@ figure {
   color: #13a5ff;
   font-size: 57px;
   font-weight: 400;
+  display: block;
 }
 
 .left-arrow-3 {
@@ -6813,6 +6814,7 @@ figure {
   }
 
   .servicebuttonwrapper {
+    padding-top: 20px;
     padding-left: 20px;
   }
 
