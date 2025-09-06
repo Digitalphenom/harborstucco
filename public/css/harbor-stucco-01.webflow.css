@@ -1672,26 +1672,12 @@ figure {
 }
 
 .div-block-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
   height: 100%;
   margin-top: 40px;
-  margin-bottom: 0px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .heading-18 {
@@ -3219,7 +3205,7 @@ figure {
   margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
   color: #222425;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -4874,7 +4860,7 @@ figure {
 
 .heading-34 {
   font-family: aktiv-grotesk-condensed, sans-serif;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
 }
 
