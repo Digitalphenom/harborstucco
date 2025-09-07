@@ -22,8 +22,8 @@ module ViewHelpers
   end
 
   def display_finishes
-    generate_textures.each.with_index(1) do |row, idx|
-      yield(row, idx)
+    generate_textures.each do |row|
+      yield(row)
     end
   end
 
