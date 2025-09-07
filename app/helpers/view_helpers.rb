@@ -21,40 +21,39 @@ module ViewHelpers
     File.read(path)
   end
 
-  def format_image(name)
-    name.split.join('-')
+  def display_finishes
+    generate_textures.each.with_index(1) do |row, idx|
+      yield(row, idx)
+    end
   end
 
-  def display_finishes
-    rows = [
+  private
+
+  def texture_rows
+    [
       ['smooth finish', 'santa barbara', 'arizona finish'],
       ['cat face', 'monterey finish', 'trowel sweep'],
       ['spanish finish', 'fine sand', 'english finish']
     ]
+  end
 
-    result = rows.map.with_index do |row, idx|
-      row.map do |name|
-      formatted_name = format_image(name)
-        "<div class=\"div-block-9 mobiletexturehide\">
-          <h4 class=\"heading-24\">#{name.upcase}</h4>
-          <img
-            class=\"image-4\"
-            loading=\"lazy\"
-            src=\"images/#{formatted_name}.png\"
-            srcset=\"
-              images/#{formatted_name}.png 676w\
-              images/#{formatted_name}-p-500.png 500w
-              images/#{formatted_name}-p-130x130q80.png 130w\"
-            sizes=\"
-              (max-width: 479px) 100vw,
-              (max-width: 767px) 33vw,
-              (max-width: 991px) 160px, 234px\"
-            alt=\"#{formatted_name}\">
-        </div>"
+  def format_image(name)
+    name.split.join('-')
+  end
+
+  def mobile_view(num)
+    num % 3 == 0 ? 'mobiletexturehide' : ''
+  end
+
+  def generate_textures
+    texture_rows.map.with_index do |row, idx|
+      row.map.with_index(1) do |name, num|
+        @name = name
+        @num = num
+        @mobile = mobile_view(num)
+        @formatted_name = format_image(name)
+        erb :"textures.html"
       end
-    end
-    result.each.with_index(1) do |row, idx|
-      yield(row, idx)
     end
   end
 end
