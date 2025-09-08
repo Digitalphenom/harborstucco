@@ -15,10 +15,10 @@ module ViewHelpers
     File.exist?(path) ? File.read(path) : ""
   end
 
-  def load_cta
-    file = 'cta.html.erb'
-    path = File.join(File.expand_path('../../views/', __dir__), file)
-    File.read(path)
+  def display_cta
+    load_cta_yaml
+
+    erb :"cta.html"
   end
 
   def display_faq
@@ -26,6 +26,14 @@ module ViewHelpers
   end
 
   private
+
+  def load_cta_yaml
+    @yml = YAML.load_file('data/cta.yaml')
+    @headline = @yml["cta"]["headline"]
+    @phone = @yml["cta"]["phone"]
+    @button = @yml["cta"]["button"]
+    @content = @yml["cta"]["content"]
+  end
 
   def load_yaml
     @yml = YAML.load_file('data/faq.yaml')
