@@ -28,7 +28,7 @@ module ViewHelpers
   private
 
   def load_yaml
-    @yml = YAML.load_file('test.yaml')
+    @yml = YAML.load_file('data/faq.yaml')
     questions = @yml["FAQ"]["questions"]
     answers = @yml["FAQ"]["answers"]
 
