@@ -2266,22 +2266,12 @@ figure {
 }
 
 .container-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  align-items: center;
   background-color: transparent;
-  text-align: center;
 }
 
 .faq-heading {
@@ -2294,6 +2284,7 @@ figure {
 
 .faqcontainer {
   height: 100%;
+  width: 85%;
   margin-top: 40px;
   padding: 20px;
   background-color: #f5f6f7;
@@ -4311,6 +4302,7 @@ figure {
   background-color: #f5f8fa;
   font-family: 'Open Sans', sans-serif;
   text-align: left;
+  width: 100%;
 }
 
 .div-block-41 {
@@ -4331,6 +4323,8 @@ figure {
 .heading-28 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  font-size: 24px;
+  text-align: center;
 }
 
 .heading-29 {
@@ -4342,18 +4336,11 @@ figure {
 }
 
 .faqdivider {
-  display: block;
   width: auto;
   height: 1px;
   max-width: 530px;
   margin: 20px auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: #d3d3d3;
 }
@@ -8982,7 +8969,7 @@ figure {
   }
 
   .heading-28 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .div-block-44 {
