@@ -20,4 +20,22 @@ module ViewHelpers
     path = File.join(File.expand_path('../../views/', __dir__), file)
     File.read(path)
   end
+
+  def display_faq
+    load_yaml.join
+  end
+
+  private
+
+  def load_yaml
+    @yml = YAML.load_file('test.yaml')
+    questions = @yml["FAQ"]["questions"]
+    answers = @yml["FAQ"]["answers"]
+
+    questions.map.with_index do |question, idx|
+      @question = question
+      @answer = answers[idx]
+      erb :"faq.html"
+    end
+  end
 end

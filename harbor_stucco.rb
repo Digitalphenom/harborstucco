@@ -3,6 +3,7 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'sinatra/content_for'
 require 'rack-livereload'
+require 'yaml'
 
 require_relative 'app/helpers/view_helpers.rb'
 # ‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧
