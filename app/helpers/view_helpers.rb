@@ -27,6 +27,10 @@ module ViewHelpers
     end
   end
 
+  def display_texture_section
+    erb :"texture_section.html"
+  end
+
   private
 
   def texture_rows

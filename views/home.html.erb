@@ -110,29 +110,7 @@
   </section>
 
   <section class="texturessection wf-section">
-    <header class="div-block">
-      <h2 class="heading-34">Stucco Texture Finishing options</h2>
-      <p class="paragraph tabletadjustment">
-        When tasked with picking one of the various stucco texture finishing options most homeowners have no idea what options are available.
-      </p>
-      <p class="paragraph tabletadjustment">
-        There are various stucco textures to choose from, each with its unique character. Some are best used for commercial projects, while others are best for sophisticated urban homes. Stucco texture offers a sense of individuality that will undoubtedly allow you to stand out in a sea of sameness.
-      </p>
-      <p class="paragraph tabletadjustment">
-        To help you choose the right stucco texture here are several of the most popular options.
-      </p>
-    </header>
-    <!-- texture finishes -->
-    <div class="container w-container">
-      <div class="div-block-8">
-        <% display_finishes() do |row|  %>
-          <div class="row1">
-            <%== row.join %>
-          </div>
-        <% end %>
-      </div>
-    <!-- end textures -->
-    </div>
+    <%== display_texture_section() %>
   </section>
 
   <article class="close wf-section">
