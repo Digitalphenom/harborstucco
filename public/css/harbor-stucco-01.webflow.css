@@ -478,6 +478,7 @@ figure {
 
 .paragraph.tabletadjustment {
   position: relative;
+  width: 100%;
   margin-top: 15px;
   font-size: 18px;
 }
