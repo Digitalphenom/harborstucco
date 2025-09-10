@@ -25,29 +25,15 @@ module ViewHelpers
   end
 
   def display_faq
-    load_yaml.join
-  end
-
-  private
-
-  def load_cta_yaml
-    @yml = YAML.load_file('data/cta.yaml')
-    @headline = @yml["cta"]["headline"]
-    @phone = @yml["cta"]["phone"]
-    @button = @yml["cta"]["button"]
-    @content = @yml["cta"]["content"]
-  end
-
-  def load_yaml
-    @yml = YAML.load_file('data/faq.yaml')
-    questions = @yml["FAQ"]["questions"]
-    answers = @yml["FAQ"]["answers"]
+    questions = @home_page["FAQ"]["questions"]
+    answers = @home_page["FAQ"]["answers"]
 
     questions.map.with_index do |question, idx|
       @question = question
       @answer = answers[idx]
+
       erb :"faq.html"
-    end
+    end.join
   end
 
   def display_finishes
