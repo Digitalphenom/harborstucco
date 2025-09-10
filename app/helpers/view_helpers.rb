@@ -46,4 +46,44 @@ module ViewHelpers
       erb :"faq.html"
     end
   end
+
+  def display_finishes
+    generate_textures.each do |row|
+      yield(row)
+    end
+  end
+
+  def display_texture_section
+    erb :"texture_section.html"
+  end
+
+  private
+
+  def texture_rows
+    [
+      ['smooth finish', 'santa barbara', 'arizona finish'],
+      ['cat face', 'monterey finish', 'trowel sweep'],
+      ['spanish finish', 'fine sand', 'english finish']
+    ]
+  end
+
+  def format_image(name)
+    name.split.join('-')
+  end
+
+  def mobile_view(num)
+    num % 3 == 0 ? 'mobiletexturehide' : ''
+  end
+
+  def generate_textures
+    texture_rows.map.with_index do |row, idx|
+      row.map.with_index(1) do |name, num|
+        @name = name
+        @num = num
+        @mobile = mobile_view(num)
+        @formatted_name = format_image(name)
+        erb :"textures.html"
+      end
+    end
+  end
 end
