@@ -76,12 +76,13 @@ module ViewHelpers
   end
 
   def generate_textures
-    texture_rows.map.with_index do |row, idx|
+    texture_rows.map do |row|
       row.map.with_index(1) do |name, num|
         @name = name
         @num = num
         @mobile = mobile_view(num)
         @formatted_name = format_image(name)
+
         erb :"textures.html"
       end
     end
