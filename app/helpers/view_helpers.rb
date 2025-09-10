@@ -15,6 +15,24 @@ module ViewHelpers
     File.exist?(path) ? File.read(path) : ""
   end
 
+  def display_hero_section
+    
+    erb :"hero_section.html"
+  end
+
+  def display_subhero_section
+    
+    erb :"subhero_section.html"
+  end
+
+  def display_reviews_section
+    erb :"review_cards.html"  
+  end
+
+  def display_services_section
+    erb :"services_section.html"
+  end
+
   def display_cta
     @headline = @home_page["cta"]["headline"]
     @phone = @home_page["cta"]["phone"]
@@ -24,7 +42,11 @@ module ViewHelpers
     erb :"cta.html"
   end
 
-  def display_faq
+  def display_faq_section
+    erb :"faq_section.html"
+  end
+
+  def display_faq_card
     questions = @home_page["FAQ"]["questions"]
     answers = @home_page["FAQ"]["answers"]
 
@@ -36,12 +58,6 @@ module ViewHelpers
     end.join
   end
 
-  def display_finishes
-    generate_textures.each do |row|
-      yield(row)
-    end
-  end
-
   def display_texture_section
     @headline = @home_page["TEXTURES"]["headline"]
     @paragraph_1 = @home_page["TEXTURES"]["paragraph_1"]
@@ -49,6 +65,16 @@ module ViewHelpers
     @paragraph_3 = @home_page["TEXTURES"]["paragraph_3"]
 
     erb :"texture_section.html"
+  end
+
+  def display_finishes
+    generate_textures.each do |row|
+      yield(row)
+    end
+  end
+
+  def display_cta2_section
+    erb :"cta2_section.html"
   end
 
   private

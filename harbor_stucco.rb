@@ -35,9 +35,7 @@ class HarborStucco < Sinatra::Base
   end
 
   get '/' do
-    erb :"home.html", layout: :"layout.html" do
-      erb :"review_cards.html"  
-    end
+    erb :"home.html", layout: :"layout.html"
   end
 
   get '/estimate' do
