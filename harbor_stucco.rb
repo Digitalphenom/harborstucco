@@ -30,6 +30,10 @@ class HarborStucco < Sinatra::Base
       no_swf: true
   end
 
+  before do 
+    @home_page = YAML.load_file('data/home.yaml')
+  end
+
   get '/' do
     erb :"home.html", layout: :"layout.html" do
       erb :"review_cards.html"  
