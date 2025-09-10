@@ -16,7 +16,10 @@ module ViewHelpers
   end
 
   def display_cta
-    load_cta_yaml
+    @headline = @home_page["cta"]["headline"]
+    @phone = @home_page["cta"]["phone"]
+    @button = @home_page["cta"]["button"]
+    @content = @home_page["cta"]["content"]
 
     erb :"cta.html"
   end
