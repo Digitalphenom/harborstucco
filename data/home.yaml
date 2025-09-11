@@ -1,4 +1,10 @@
-
+HERO:
+  headline:
+    Residential &amp; Commercial
+    <span class="headlinespandesktop">
+    Stucco Repair
+  button_text:
+    Get My Estimate
 CTA:
   headline: 
     Call To Get An Estimate <span class="text-span-13">Today</span>
