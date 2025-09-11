@@ -1,10 +1,11 @@
 
-cta:
+CTA:
   headline: 
-   Call To Get An Estimate <span class="text-span-13">Today</span>
+    Call To Get An Estimate <span class="text-span-13">Today</span>
   content:
-    In need of <strong>Stucco Repair?</strong><br>Call and get a free estimate today. Harbor Stucco provides trusted construction and remodeling services for both homeowners and business owners. Our team of professionals are committed to working with you to make your project a success.
-    <br><br>Pick up the phone and make an appointment for a free estimate or fillout the form below. We look forward to hearing from you.
+    - In need of <strong>Stucco Repair?</strong>
+    - Call and get a free estimate today. Harbor Stucco provides trusted  construction and remodeling services for both homeowners and business owners. Our team of professionals are committed to working with you to make your project a success.
+    - Pick up the phone and make an appointment for a free estimate or fillout the form below. We look forward to hearing from you.
   phone:
     (562)384-2575
   button:

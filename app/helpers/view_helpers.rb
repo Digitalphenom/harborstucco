@@ -34,10 +34,10 @@ module ViewHelpers
   end
 
   def display_cta
-    @headline = @home_page["cta"]["headline"]
-    @phone = @home_page["cta"]["phone"]
-    @button = @home_page["cta"]["button"]
-    @content = @home_page["cta"]["content"]
+    @headline = @home_page["CTA"]["headline"]
+    @phone = @home_page["CTA"]["phone"]
+    @button = @home_page["CTA"]["button"]
+    @content = @home_page["CTA"]["content"]
 
     erb :"cta.html"
   end
