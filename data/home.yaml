@@ -5,6 +5,13 @@ HERO:
     Stucco Repair
   button_text:
     Get My Estimate
+SUBHERO:
+  headline:
+    Your Go-to Stucco Repair Specialists
+  content:
+    - For over ten years, Harbor Stucco has mastered the craft of personalized stucco finish for your residential or commercial projects.
+    - We provide a wide selection of finishes suited for all yourproject needs. We'll help you prepare, plan and implementyour residential or commercial project.
+    - Our specialized team will work on perfecting your project with ahigh degree of care and quality. Whether you need stucco repairor just want to give your place a "fresh look", wevegot you covered.
 CTA:
   headline: 
     Call To Get An Estimate <span class="text-span-13">Today</span>

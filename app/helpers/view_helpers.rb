@@ -23,6 +23,8 @@ module ViewHelpers
   end
 
   def display_subhero_section
+    @headline = @home_page["SUBHERO"]["headline"]
+    @content = @home_page["SUBHERO"]["content"]
     
     erb :"subhero_section.html"
   end
