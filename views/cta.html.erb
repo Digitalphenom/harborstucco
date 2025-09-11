@@ -2,12 +2,11 @@
   <div class="container-4 adjustmentcta w-container">
     <header>
       <h2 class="heading-32"><%== @headline %></h2>
-        <% @content.map do |paragraph| %>
+      <% to_p(@content) do |paragraph| %>
         <%== "<p class=\"paragraph-11\">
           #{paragraph}
-        </p>"
-        %>
-        <% end.join() %>
+        </p>" %>
+      <% end %>
     </header>
     <a href="tel:(562)384-2575" acf:text="phone" class="ctaphone"><span class="text-span-17"><%== @phone %></span>
   <!-- button is hidden -->
