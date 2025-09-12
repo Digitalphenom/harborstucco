@@ -1,10 +1,18 @@
 <section id="FAQ" class="faq wf-section">
-    <div class="container-6 w-container">
-      <div class="div-block-44">
-        <h2 class="heading-10 faqadjustment">Your Questions Answered</h2>
-      </div>
-      <section class="faqcontainer">
-        <%== display_faq_card() %>
-      </section>
+  <div class="container-6 w-container">
+    <div class="div-block-44">
+      <h2 class="heading-10 faqadjustment"> <%== @headline %> </h2>
     </div>
-  </section>
+    <section class="faqcontainer">
+      <div class="div-block-41">          
+      <% display_faq_card() do |question, answers, idx| %>
+        <%== "<h3 class='heading-28'>#{question}</h3>" %>
+        <div class="faqdivider"></div>
+      <% answers[idx].each do |answer| %>
+          <%== "<p class='paragraph-15'>#{answer}</p>" %>
+        <% end %>
+      <% end %>
+      </div>
+    </section>
+  </div>
+</section>

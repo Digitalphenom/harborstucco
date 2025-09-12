@@ -47,18 +47,17 @@ module ViewHelpers
   end
 
   def display_faq_section
+    @headline = @home_page["FAQ"]["headline"]
+
     erb :"faq_section.html"
   end
 
   def display_faq_card
-    questions = @home_page["FAQ"]["questions"]
-    answers = @home_page["FAQ"]["answers"]
+    @questions = @home_page["FAQ"]["questions"]
+    @answers = @home_page["FAQ"]["answers"]
 
-    questions.map.with_index do |question, idx|
-      @question = question
-      @answer = answers[idx]
-
-      erb :"faq.html"
+    @questions.map.with_index do |question, idx|
+      yield(question, @answers, idx)
     end.join
   end
 
