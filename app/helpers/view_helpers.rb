@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ViewHelpers
   def meta_tags_from(env)
     path = env['REQUEST_PATH']
@@ -30,7 +32,7 @@ module ViewHelpers
   end
 
   def display_reviews_section
-    erb :"review_cards.html"  
+    erb :"review_cards.html"
   end
 
   def display_services_section
@@ -62,10 +64,10 @@ module ViewHelpers
   end
 
   def display_texture_section
-    @headline = @home_page["TEXTURES"]["headline"]
-    @paragraph_1 = @home_page["TEXTURES"]["paragraph_1"]
-    @paragraph_2 = @home_page["TEXTURES"]["paragraph_2"]
-    @paragraph_3 = @home_page["TEXTURES"]["paragraph_3"]
+    @headline = @home_page['TEXTURES']['headline']
+    @paragraph_1 = @home_page['TEXTURES']['paragraph_1']
+    @paragraph_2 = @home_page['TEXTURES']['paragraph_2']
+    @paragraph_3 = @home_page['TEXTURES']['paragraph_3']
 
     erb :"texture_section.html"
   end
@@ -101,7 +103,7 @@ module ViewHelpers
   end
 
   def mobile_view(num)
-    num % 3 == 0 ? 'mobiletexturehide' : ''
+    (num % 3).zero? ? 'mobiletexturehide' : ''
   end
 
   def generate_textures
