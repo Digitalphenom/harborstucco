@@ -1,6 +1,6 @@
 module ViewHelpers
   def meta_tags_from(env)
-    path = env['REQUEST_PATH'] 
+    path = env['REQUEST_PATH']
 
     if path == '/'
       load_meta_tags('layout_meta.html.erb')
@@ -12,20 +12,20 @@ module ViewHelpers
 
   def load_meta_tags(file)
     path = File.join(File.expand_path('../../views/meta/', __dir__), file)
-    File.exist?(path) ? File.read(path) : ""
+    File.exist?(path) ? File.read(path) : ''
   end
 
   def display_hero_section
-    @headline = @home_page["HERO"]["headline"]
-    @button_text = @home_page["HERO"]["button_text"]
-    
+    @headline = @home_page['HERO']['headline']
+    @button_text = @home_page['HERO']['button_text']
+
     erb :"hero_section.html"
   end
 
   def display_subhero_section
-    @headline = @home_page["SUBHERO"]["headline"]
-    @content = @home_page["SUBHERO"]["content"]
-    
+    @headline = @home_page['SUBHERO']['headline']
+    @content = @home_page['SUBHERO']['content']
+
     erb :"subhero_section.html"
   end
 
@@ -38,23 +38,23 @@ module ViewHelpers
   end
 
   def display_cta
-    @headline = @home_page["CTA"]["headline"]
-    @phone = @home_page["CTA"]["phone"]
-    @button = @home_page["CTA"]["button"]
-    @content = @home_page["CTA"]["content"]
+    @headline = @home_page['CTA']['headline']
+    @phone = @home_page['CTA']['phone']
+    @button = @home_page['CTA']['button']
+    @content = @home_page['CTA']['content']
 
     erb :"cta.html"
   end
 
   def display_faq_section
-    @headline = @home_page["FAQ"]["headline"]
+    @headline = @home_page['FAQ']['headline']
 
     erb :"faq_section.html"
   end
 
   def display_faq_card
-    @questions = @home_page["FAQ"]["questions"]
-    @answers = @home_page["FAQ"]["answers"]
+    @questions = @home_page['FAQ']['questions']
+    @answers = @home_page['FAQ']['answers']
 
     @questions.map.with_index do |question, idx|
       yield(question, @answers, idx)
