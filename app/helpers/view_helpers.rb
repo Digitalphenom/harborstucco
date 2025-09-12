@@ -5,7 +5,7 @@ module ViewHelpers
     if path == '/'
       load_meta_tags('layout_meta.html.erb')
     else
-      path = path.split('/').join + '_meta.erb'
+      path = "#{path.split('/').join}_meta.erb"
       load_meta_tags(path)
     end
   end
