@@ -32,6 +32,7 @@ class HarborStucco < Sinatra::Base
 
   before do 
     @home_page = YAML.load_file('data/home.yaml')
+    @alt_tags = YAML.load_file('data/alt_tags.yaml')
   end
 
   get '/' do
