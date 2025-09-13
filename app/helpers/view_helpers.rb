@@ -36,6 +36,10 @@ module ViewHelpers
   end
 
   def display_services_section
+    @headlines = @home_page['SERVICE']['headlines'].dup
+    @services = @home_page['SERVICE']['services'].dup
+    @img_tags = @alt_tags['SERVICE'].dup
+
     erb :"services_section.html"
   end
 
