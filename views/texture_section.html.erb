@@ -8,9 +8,27 @@
   <!-- texture finishes -->
   <div class="container w-container">
     <div class="div-block-8">
-      <% display_finishes() do |row|  %>
+      <% texture_rows.each do |row| %>
         <div class="row1">
-          <%== row.join %>
+        <% row.each.with_index(1) do |texture_name, i| %>
+          <div class="div-block-9 <%== mobile_view(i) %>">
+          <h4 class="heading-24"><%== texture_name.upcase %></h4>
+          <img
+            class="image-4"
+            loading="lazy"
+            src="images/textures/<%== format_image(texture_name) %>.png"
+            srcset="
+              images/textures/<%== format_image(texture_name) %>.png 676w
+              images/textures/<%== format_image(texture_name) %>-p-500.png 500w
+              images/textures/<%== format_image(texture_name) %>-p-130x130q80.png 130w"
+            sizes="
+              (max-width: 479px) 100vw,
+              (max-width: 767px) 33vw,
+              (max-width: 991px) 160px, 234px"
+            alt="<%== format_image(texture_name) %>"
+          >
+          </div>
+        <% end%>
         </div>
       <% end %>
     </div>
