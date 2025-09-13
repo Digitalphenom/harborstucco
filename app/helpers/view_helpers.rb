@@ -84,13 +84,13 @@ module ViewHelpers
     erb :"cta2_section.html"
   end
 
+  private
+
   def to_p(content)
     content.map do |paragraph|
       yield(paragraph)
     end.join
   end
-
-  private
 
   def texture_rows
     [
