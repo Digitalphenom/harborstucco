@@ -1,15 +1,9 @@
 <section class="texturessection wf-section">
   <header class="div-block">
-    <h2 class="heading-34">Stucco Texture Finishing options</h2>
-    <p class="paragraph tabletadjustment">
-      <%== @paragraph_1 %>
-    </p>
-    <p class="paragraph tabletadjustment">
-      <%== @paragraph_2 %>
-    </p>
-    <p class="paragraph tabletadjustment">
-      <%== @paragraph_3 %>
-    </p>
+    <h2 class="heading-34"><%== @headline %></h2>
+<% to_p(@content) do |paragraph| %>
+    <p class="paragraph tabletadjustment"><%== paragraph %></p>
+<% end %>
   </header>
   <!-- texture finishes -->
   <div class="container w-container">
