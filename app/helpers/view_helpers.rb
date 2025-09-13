@@ -103,6 +103,8 @@ module ViewHelpers
   end
 
   def format_image(name)
+    return '' if name.nil?
+
     name.split.join('-')
   end
 
