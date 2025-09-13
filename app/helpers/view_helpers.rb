@@ -71,9 +71,7 @@ module ViewHelpers
 
   def display_texture_section
     @headline = @home_page['TEXTURES']['headline']
-    @paragraph_1 = @home_page['TEXTURES']['paragraph_1']
-    @paragraph_2 = @home_page['TEXTURES']['paragraph_2']
-    @paragraph_3 = @home_page['TEXTURES']['paragraph_3']
+    @content = @home_page['TEXTURES']['content']
 
     erb :"texture_section.html"
   end
