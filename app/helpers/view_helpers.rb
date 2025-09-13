@@ -75,13 +75,7 @@ module ViewHelpers
 
     erb :"texture_section.html"
   end
-
-  def display_finishes
-    generate_textures.each do |row|
-      yield(row)
-    end
-  end
-
+  
   def display_cta2_section
     @headline = @home_page['CTA2']['headline']
     @headline_stylized = @home_page['CTA2']['headline_stylized']
