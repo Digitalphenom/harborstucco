@@ -83,6 +83,10 @@ module ViewHelpers
   end
 
   def display_cta2_section
+    @headline = @home_page['CTA2']['headline']
+    @headline_stylized = @home_page['CTA2']['headline_stylized']
+    @button_text = @home_page['CTA2']['button_text']
+
     erb :"cta2_section.html"
   end
 
