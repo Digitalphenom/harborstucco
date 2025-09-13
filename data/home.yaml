@@ -93,9 +93,7 @@ FAQ:
 TEXTURES:
   headline:
     Stucco Texture Finishing options
-  paragraph_1:
-    When tasked with picking one of the various stucco texturfinishingoptions most homeowners have no idea what options aravailable. 
-  paragraph_2:
-    There are various stucco textures to choose from, each with uniquecharacter. Some are best used for commercial projectswhile othersare best for sophisticated urban homes. Stucctexture offers a senseof individuality that will undoubtedlallow you to stand out in a seaof sameness. 
-  paragraph_3:
-    To help you choose the right stucco texture here are several othe most popular options.
+  content:
+    - When tasked with picking one of the various stucco texturfinishingoptions most homeowners have no idea what options aravailable.
+    - There are various stucco textures to choose from, each with uniquecharacter. Some are best used for commercial projectswhile othersare best for sophisticated urban homes. Stucctexture offers a senseof individuality that will undoubtedlallow you to stand out in a seaof sameness.
+    - To help you choose the right stucco texture here are several othe most popular options.
