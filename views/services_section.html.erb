@@ -1,14 +1,12 @@
 <section id="cards-section" class="servicesection wf-section">
   <div class="centered-container sectionmobileadjustment w-container">
-    <h2 class="stuccoservicesheadline"> Stucco Repair Services</h2>
+    <h2 class="stuccoservicesheadline"><%== @headline %></h2>
     <br>
-    <h3 class="heading-10">
-      Here&#x27;s How We Can Help You With Your Next Project
-    </h3>
+    <h3 class="heading-10"><%== @sub_headline %></h3>
   <% 3.times do %>
     <section class="section1">
     <% 2.times do |i| %>
-    <% headline = @headlines.shift %>
+    <% headline = @service_headlines.shift %>
     <% alt_tag = @img_tags.shift %>
     <% next if headline.nil? %>
       <section class="div-block-3">

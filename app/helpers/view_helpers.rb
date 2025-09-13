@@ -36,7 +36,9 @@ module ViewHelpers
   end
 
   def display_services_section
-    @headlines = @home_page['SERVICE']['headlines'].dup
+    @headline = @home_page['SERVICE']['headline']
+    @sub_headline = @home_page['SERVICE']['sub_headline']
+    @service_headlines = @home_page['SERVICE']['service_headlines'].dup
     @services = @home_page['SERVICE']['services'].dup
     @img_tags = @alt_tags['SERVICE'].dup
 
