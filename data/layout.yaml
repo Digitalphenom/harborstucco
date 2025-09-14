@@ -1,0 +1,36 @@
+FOOTER:
+  headings:
+    - Navigation
+    - Services
+    - Service Area
+    - Contact Us
+  links:
+    -
+      - Home
+      - Service
+      - Location
+      - About Us
+      - Blog
+      - FAQ
+    -
+      - Stucco Repair
+      - Re-Stucco
+      - Tex-Cote Removal
+      - Fog Coating
+      - Stucco Patching
+      - Stucco Textures
+    - 
+      - Los Angeles
+      - Torrance
+      - Palos Verdes
+      - Redondo Beach
+      - Manhattan Beach
+      - Harbor City
+      - Long Beach
+    - 
+      - 1263 beacon ln
+      - Socials
+  compliance:
+    - Copyright © 2021 Harbor Stucco All Rights Reserved<br>
+    - Privacy Policy
+    - California Consumer Policy

@@ -1,0 +1,26 @@
+<footer id="footer" class="footer mobilefooteradjustment wf-section">
+    <div class="container-7 w-container">
+      <div class="footer-flex-container">
+      <% @headers.each.with_index do |headers, i| %>
+        <div class="footerelementswrapper">
+          <h4 class="footer-heading"><%== headers %></h4>
+        <% @links[i].each do |link| %>
+          <ul role="list" class="list w-list-unstyled">
+            <li class="list-item">
+              <a href="#<%== link %>" class="footer-link"><%== link %></a>
+            </li>
+          </ul>
+        <% end %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="privacypolicy w-container">
+  <% @compliance.each do |policy| %>
+    <div class="privacywrapper">
+      <a href="#" class="privacyp"><%== policy %></a>
+    </div>
+  <% end %>
+  </div>
+</footer>

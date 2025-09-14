@@ -85,6 +85,14 @@ module ViewHelpers
     erb :"cta2_section.html"
   end
 
+  def display_footer
+    @headers = @layout['FOOTER']['headings']
+    @links = @layout['FOOTER']['links']
+    @compliance = @layout['FOOTER']['compliance']
+
+    erb :"layout/footer.html"
+  end
+
   private
 
   def to_p(content)
