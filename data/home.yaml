@@ -1,7 +1,7 @@
 HERO:
   headline:
     Residential &amp; Commercial
-    <span class="headlinespandesktop">
+  headline_stylized:
     Stucco Repair
   button_text:
     Get My Estimate

@@ -19,6 +19,7 @@ module ViewHelpers
 
   def display_hero_section
     @headline = @home_page['HERO']['headline']
+    @headline_stylized = @home_page['HERO']['headline_stylized']
     @button_text = @home_page['HERO']['button_text']
 
     erb :"hero_section.html"
