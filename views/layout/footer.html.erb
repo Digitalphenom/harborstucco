@@ -1,13 +1,13 @@
 <footer id="footer" class="footer mobilefooteradjustment wf-section">
     <div class="container-7 w-container">
       <div class="footer-flex-container">
-      <% @headers.each.with_index do |headers, i| %>
+      <% each_header() do |header, sub_headers| %>
         <div class="footerelementswrapper">
-          <h4 class="footer-heading"><%== headers %></h4>
-        <% @links[i].each do |link| %>
+          <h4 class="footer-heading"><%== header %></h4>
+          <% sub_headers.each do |sub_header| %>
           <ul role="list" class="list w-list-unstyled">
             <li class="list-item">
-              <a href="#<%== link %>" class="footer-link"><%== link %></a>
+              <a href="#<%== sub_header %>" class="footer-link"><%== sub_header %></a>
             </li>
           </ul>
         <% end %>
