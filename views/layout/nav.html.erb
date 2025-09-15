@@ -1,0 +1,45 @@
+<div class="topheader wf-section">
+    <div class="container-10 w-container">
+      <div class="div-block-28">
+        <a href="#" class="link-4">‍<span class="text-span-17">(310) 345-6764</span></a>
+      </div>
+      <div class="emailnumbertopheader">
+        <div class="div-block-45"><img src="images/call_24px_1call_24px.png" loading="lazy" alt="" class="image-18">
+          <a href="tel:(562)384-2575" class="link-6">(562)384-2575</a>
+        </div>
+        <a href="mailto:support@harborstucco.com" class="link-5">Support@harborstucco.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+    <div class="container-3 w-container">
+      <a href="#" class="nav-link-13 w-nav-link">HARBOR<span class="text-span-13"> Stucco</span></a>
+      <div class="menu-button w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+
+      <nav role="navigation" class="nav-menu w-nav-menu">
+    <% each_header() do |header, sub_headers| %>
+      <% if sub_headers.first.nil? %>
+      <!-- come back and add dynamic assignment of 'location' using JS -->
+        <a href="#<%== header %>" current="location" class="nav-link-8 w-nav-link w--current"><%== header %>
+        </a>
+      <!-- end -->
+      <% else %>
+        <div data-hover="false" data-delay="0" class="nav-link-8  w-dropdown">
+          <div class="openmenu w-dropdown-toggle">
+            <div class="w-icon-dropdown-toggle"></div>
+              <p><%== header %></p>
+          </div>
+          <nav class="dropdown-list-2 w-dropdown-list">
+          <% sub_headers.each do |sub_header| %>
+            <a href="/<%== format_image(sub_header) %>" class="navlinkstyle w-dropdown-link" aria-current="<%== 'page' if arria_current?(sub_header) %>"><%== sub_header %></a>
+          <% end%>
+          </nav>
+        </div>
+      <% end %>
+    <% end%>
+      </nav>
+    </div>
+  </div>

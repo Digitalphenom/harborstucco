@@ -93,6 +93,12 @@ module ViewHelpers
     erb :"layout/footer.html"
   end
 
+  def display_navigation
+    @headers = @layout['NAVIGATION']['headings']
+
+    erb :"layout/nav.html"
+  end
+
   private
 
   def to_p(content)
@@ -107,6 +113,16 @@ module ViewHelpers
       ['cat face', 'monterey finish', 'trowel sweep'],
       ['spanish finish', 'fine sand', 'english finish']
     ]
+  end
+
+  def format_aria_current(name)
+    return '/' if name == 'Home'
+
+    '/' + format_image(name)
+  end
+
+  def arria_current?(header)
+    request.path_info == format_aria_current(header)
   end
 
   def format_image(name)

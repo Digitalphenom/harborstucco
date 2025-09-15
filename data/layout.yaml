@@ -1,3 +1,24 @@
+NAVIGATION:
+  headings:
+    - Home:
+    - Services:
+      - Stucco Repair
+      - Re-Stucco
+      - Tex-Cote Removal
+      - Fog Coating
+      - Stucco Patching
+      - Stucco Textures
+    - locations:
+      - Los Angeles
+      - Torrance
+      - Palos Verdes
+      - Redondo Beach
+      - Manhattan Beach
+      - Harbor City
+      - Long Beach
+    - About Us:
+    - Blog:
+    - FAQ:
 FOOTER:
   headings:
     - Navigation
