@@ -44,7 +44,7 @@ class HarborStucco < Sinatra::Base
     erb :"estimate.html", layout: :"layout.html"
   end
   
-  get '/stuccorepair' do
+  get '/stucco-repair' do
     erb :"stuccorepair.html", layout: :"layout.html"
   end
 
