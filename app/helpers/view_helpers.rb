@@ -113,6 +113,14 @@ module ViewHelpers
     end
   end
 
+  def to_harbor_stucco_path(value)
+    if value == 'stucco repair'
+      'stuccorepair'
+    else
+      format_image(value)
+    end
+  end
+
   def to_p(content)
     content.map do |paragraph|
       yield(paragraph)
