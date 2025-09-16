@@ -22,18 +22,18 @@ module ViewHelpers
     @headline_stylized = @home_page['HERO']['headline_stylized']
     @button_text = @home_page['HERO']['button_text']
 
-    erb :"hero_section.html"
+    erb :"home/_hero_section.html"
   end
 
   def display_subhero_section
     @headline = @home_page['SUBHERO']['headline']
     @content = @home_page['SUBHERO']['content']
 
-    erb :"subhero_section.html"
+    erb :"home/_subhero_section.html"
   end
 
   def display_reviews_section
-    erb :"review_cards.html"
+    erb :"home/_review_cards.html"
   end
 
   def display_services_section
@@ -43,7 +43,7 @@ module ViewHelpers
     @services = @home_page['SERVICE']['services'].dup
     @img_tags = @alt_tags['SERVICE'].dup
 
-    erb :"services_section.html"
+    erb :"home/_services_section.html"
   end
 
   def display_cta
@@ -52,13 +52,13 @@ module ViewHelpers
     @button = @home_page['CTA']['button']
     @content = @home_page['CTA']['content']
 
-    erb :"cta.html"
+    erb :"home/_cta.html"
   end
 
   def display_faq_section
     @headline = @home_page['FAQ']['headline']
 
-    erb :"faq_section.html"
+    erb :"home/_faq_section.html"
   end
 
   def display_faq_card
@@ -74,7 +74,7 @@ module ViewHelpers
     @headline = @home_page['TEXTURES']['headline']
     @content = @home_page['TEXTURES']['content']
 
-    erb :"texture_section.html"
+    erb :"home/_texture_section.html"
   end
 
   def display_cta2_section
@@ -82,25 +82,25 @@ module ViewHelpers
     @headline_stylized = @home_page['CTA2']['headline_stylized']
     @button_text = @home_page['CTA2']['button_text']
 
-    erb :"cta2_section.html"
+    erb :"home/_cta2_section.html"
   end
 
   def display_footer
     @headers = @layout['FOOTER']['headings']
     @compliance = @layout['FOOTER']['compliance']
 
-    erb :"layout/footer.html"
+    erb :"layout/_footer.html"
   end
 
   def display_head
 
-    erb :"layout/head.html"
+    erb :"layout/_head.html"
   end
 
   def display_navigation
     @headers = @layout['NAVIGATION']['headings']
 
-    erb :"layout/nav.html"
+    erb :"layout/_nav.html"
   end
 
   private
