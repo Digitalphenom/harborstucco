@@ -92,6 +92,11 @@ module ViewHelpers
     erb :"layout/footer.html"
   end
 
+  def display_head
+
+    erb :"layout/head.html"
+  end
+
   def display_navigation
     @headers = @layout['NAVIGATION']['headings']
 
