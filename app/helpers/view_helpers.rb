@@ -140,7 +140,7 @@ module ViewHelpers
   def format_image(name)
     return '' if name.nil?
 
-    name.split.join('-')
+    name.split.map(&:downcase).join('-')
   end
 
   def mobile_view(num)
