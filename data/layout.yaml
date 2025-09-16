@@ -21,26 +21,21 @@ NAVIGATION:
     - FAQ:
 FOOTER:
   headings:
-    - Navigation
-    - Services
-    - Service Area
-    - Contact Us
-  links:
-    -
+    - Navigation:
       - Home
       - Service
       - Location
       - About Us
       - Blog
       - FAQ
-    -
+    - Services:
       - Stucco Repair
       - Re-Stucco
       - Tex-Cote Removal
       - Fog Coating
       - Stucco Patching
       - Stucco Textures
-    - 
+    - Service Area:
       - Los Angeles
       - Torrance
       - Palos Verdes
@@ -48,7 +43,7 @@ FOOTER:
       - Manhattan Beach
       - Harbor City
       - Long Beach
-    - 
+    - Contact Us:
       - 1263 beacon ln
       - Socials
   compliance:

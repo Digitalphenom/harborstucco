@@ -87,7 +87,6 @@ module ViewHelpers
 
   def display_footer
     @headers = @layout['FOOTER']['headings']
-    @links = @layout['FOOTER']['links']
     @compliance = @layout['FOOTER']['compliance']
 
     erb :"layout/footer.html"
