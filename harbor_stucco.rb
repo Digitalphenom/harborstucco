@@ -22,6 +22,7 @@ class HarborStucco < Sinatra::Base
     register Sinatra::Reloader
 
     also_reload "app/helpers/view_helpers.rb"
+    also_reload "app/helpers/content_helpers.rb"
     also_reload "harbor_stucco.rb"
 
     use Rack::LiveReload,

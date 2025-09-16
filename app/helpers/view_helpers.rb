@@ -1,6 +1,9 @@
 # frozen_string_literal: true
+require_relative 'content_helpers.rb'
 
 module ViewHelpers
+  include ContentHelpers
+
   def meta_tags_from(env)
     path = env['REQUEST_PATH']
 
@@ -18,16 +21,17 @@ module ViewHelpers
   end
 
   def display_hero_section
-    @headline = @home_page['HERO']['headline']
-    @headline_stylized = @home_page['HERO']['headline_stylized']
-    @button_text = @home_page['HERO']['button_text']
+    @headline = select_home_content('HERO', 'headline')
+    @headline_stylized = select_home_content('HERO', 'headline_stylized')
+    @button_text = select_home_content('HERO', 'button_text')
 
     erb :"home/_hero_section.html"
   end
 
   def display_subhero_section
-    @headline = @home_page['SUBHERO']['headline']
-    @content = @home_page['SUBHERO']['content']
+    @headline = select_home_content('SUBHERO', 'headline')
+    @content = select_home_content('SUBHERO', 'content')
+    
 
     erb :"home/_subhero_section.html"
   end
@@ -37,57 +41,57 @@ module ViewHelpers
   end
 
   def display_services_section
-    @headline = @home_page['SERVICE']['headline']
-    @sub_headline = @home_page['SERVICE']['sub_headline']
-    @service_headlines = @home_page['SERVICE']['service_headlines'].dup
-    @services = @home_page['SERVICE']['services'].dup
-    @img_tags = @alt_tags['SERVICE'].dup
+    @headline = select_home_content('SERVICE', 'headline')
+    @sub_headline = select_home_content('SERVICE', 'sub_headline')
+    @service_headlines = select_home_content('SERVICE', 'service_headlines').dup
+    @services = select_home_content('SERVICE', 'services').dup
+    @img_tags = select_alt_content('SERVICE').dup
 
     erb :"home/_services_section.html"
   end
 
   def display_cta
-    @headline = @home_page['CTA']['headline']
-    @phone = @home_page['CTA']['phone']
-    @button = @home_page['CTA']['button']
-    @content = @home_page['CTA']['content']
+    @headline = select_home_content('CTA', 'headline')
+    @phone = select_home_content('CTA', 'phone')
+    @button = select_home_content('CTA', 'button')
+    @content = select_home_content('CTA', 'content')
 
     erb :"home/_cta.html"
   end
 
   def display_faq_section
-    @headline = @home_page['FAQ']['headline']
+    @headline = select_home_content('FAQ', 'headline')
 
     erb :"home/_faq_section.html"
   end
 
   def display_faq_card
-    @questions = @home_page['FAQ']['questions']
-    @answers = @home_page['FAQ']['answers']
+    questions = select_home_content('FAQ', 'questions')
+    answers = select_home_content('FAQ', 'answers')
 
-    @questions.map.with_index do |question, idx|
-      yield(question, @answers, idx)
+    questions.map.with_index do |question, idx|
+      yield(question, answers, idx)
     end.join
   end
 
   def display_texture_section
-    @headline = @home_page['TEXTURES']['headline']
-    @content = @home_page['TEXTURES']['content']
+    @headline = select_home_content('TEXTURES', 'headline')
+    @content = select_home_content('TEXTURES', 'content')
 
     erb :"home/_texture_section.html"
   end
 
   def display_cta2_section
-    @headline = @home_page['CTA2']['headline']
-    @headline_stylized = @home_page['CTA2']['headline_stylized']
-    @button_text = @home_page['CTA2']['button_text']
+    @headline = select_home_content('CTA2', 'headline')
+    @headline_stylized = select_home_content('CTA2', 'headline_stylized')
+    @button_text = select_home_content('CTA2', 'button_text')
 
     erb :"home/_cta2_section.html"
   end
 
   def display_footer
-    @headers = @layout['FOOTER']['headings']
-    @compliance = @layout['FOOTER']['compliance']
+    @headers = select_layout_content('FOOTER', 'headings') 
+    @compliance = select_layout_content('FOOTER', 'compliance') 
 
     erb :"layout/_footer.html"
   end
@@ -98,7 +102,7 @@ module ViewHelpers
   end
 
   def display_navigation
-    @headers = @layout['NAVIGATION']['headings']
+    @headers = select_layout_content('NAVIGATION', 'headings')
 
     erb :"layout/_nav.html"
   end
