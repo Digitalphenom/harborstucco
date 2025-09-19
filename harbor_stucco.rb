@@ -35,6 +35,7 @@ class HarborStucco < Sinatra::Base
     @home_page = YAML.load_file('data/home.yaml')
     @alt_tags = YAML.load_file('data/alt_tags.yaml')
     @layout = YAML.load_file('data/layout.yaml')
+    @restucco = YAML.load_file('data/restucco.yaml')
   end
 
   get '/' do
@@ -47,6 +48,19 @@ class HarborStucco < Sinatra::Base
   
   get '/stuccorepair' do
     erb :"stuccorepair.html", layout: :"layout.html"
+  end
+
+  get '/re-stucco' do
+    @headline = select_restucco_content('MAIN', 'headline')
+    @intro_headline = select_restucco_content('INTRO', 'headline')
+    @intro_content = select_restucco_content('INTRO', 'content')
+    @intro_link = select_restucco_content('INTRO', 'link')
+    @pricing_headline = select_restucco_content('PRICING', 'headline')
+    @pricing_content = select_restucco_content('PRICING', 'content')
+    @qna_questions = select_restucco_content('QNA', 'questions')
+    @qna_headline = select_restucco_content('QNA', 'headline')
+    
+    erb :"re-stucco.html", layout: :"layout.html"
   end
 
   get %r{/(.+)\.html} do

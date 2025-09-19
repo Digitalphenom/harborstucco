@@ -10,4 +10,8 @@ module ContentHelpers
   def select_alt_content(section)
     @alt_tags[section]
   end
+
+  def select_restucco_content(section, attribute)
+    @restucco[section][attribute]
+  end
 end
