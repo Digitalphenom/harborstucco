@@ -1,0 +1,50 @@
+<main id="main-content" class="main-content  wf-section">
+  <div class="container-14 w-container">
+    <header class="container-14 w-container">
+      <img 
+        src="images/stucco-renovation-mini.jpg"
+        loading="lazy"
+        sizes="(max-width: 767px) 67vw, (max-width: 991px) 509.59375px, 705px" width="682.5"
+        alt="Home renovation"
+        srcset="images/stucco-renovation-mini-p-500.jpeg 500w, images/stucco-renovation-mini-p-1080.jpeg 1080w, images/stucco-renovation-mini.jpg 1429w"
+        class="serviceimage"
+      >
+      <h1><%== @headline %></h1>
+    </header>
+
+    <section class="stuccorepaircontent w-richtext">
+      <h2><%== @intro_headline %></h2>
+    <% to_p(@intro_content) do |paragraph| %>
+      <% if paragraph.instance_of?(Hash) %>
+        <!-- quotes are added here -->
+        <h3>"<%== paragraph.keys.first %>"</h3>
+      <% else %>
+        <p><%== paragraph %></p>
+      <% end %>
+    <% end %>
+      <a href="/estimate"><%== @intro_link %></a>
+    </section>
+
+    <section class="stuccorepaircontent w-richtext">
+      <h2><%== @pricing_headline %></h2>
+    <% to_p(@pricing_content) do |paragraph| %>
+      <p><%== paragraph %></p>
+    <% end%>
+    </section>
+
+    <section class="stuccorepaircontent w-richtext">
+      <h2><%== @qna_headline %></h2>
+      <% each_header(@qna_questions) do |header, answer_arr| %>
+        <h3><em><%== header %></em></h3>
+      <% to_p(answer_arr) do |paragraph| %>
+        <% if paragraph.instance_of?(Hash) %>
+          <b><%== paragraph.keys.first %></b>
+        <% else %>
+          <p><%== paragraph %></p>
+        <% end %>
+      <% end %>
+    <% end %>
+    </section>
+  </div>
+<%== display_cta() %>
+</main>
