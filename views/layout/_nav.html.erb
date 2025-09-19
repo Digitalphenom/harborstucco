@@ -20,7 +20,7 @@
       </div>
 
       <nav role="navigation" class="nav-menu w-nav-menu">
-    <% each_header() do |header, sub_headers| %>
+    <% each_header(@headers) do |header, sub_headers| %>
       <% if sub_headers.first.nil? %>
       <!-- come back and add dynamic assignment of 'location' using JS -->
         <a href="#<%== header %>" current="location" class="nav-link-8 w-nav-link w--current"><%== header %>

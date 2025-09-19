@@ -109,8 +109,8 @@ module ViewHelpers
 
   private
 
-  def each_header
-    @headers.each do |hsh|
+  def each_header(obj)
+    obj.each do |hsh|
       header = hsh.keys.first
       sub_headers = hsh.values.flatten
       yield(header, sub_headers)

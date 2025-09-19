@@ -1,7 +1,7 @@
 <footer id="footer" class="footer mobilefooteradjustment wf-section">
     <div class="container-7 w-container">
       <div class="footer-flex-container">
-      <% each_header() do |header, sub_headers| %>
+      <% each_header(@headers) do |header, sub_headers| %>
         <div class="footerelementswrapper">
           <h4 class="footer-heading"><%== header %></h4>
           <% sub_headers.each do |sub_header| %>
