@@ -16,7 +16,7 @@
       <h2><%== @intro_headline %></h2>
     <% to_p(@intro_content) do |paragraph| %>
       <% if paragraph.instance_of?(Hash) %>
-        <!-- quotes are added here -->
+        <!-- displayed quotes are added here -->
         <h3>"<%== paragraph.keys.first %>"</h3>
       <% else %>
         <p><%== paragraph %></p>
@@ -45,6 +45,7 @@
       <% end %>
     <% end %>
     </section>
+
   </div>
 <%== display_cta() %>
 </main>
