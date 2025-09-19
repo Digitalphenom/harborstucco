@@ -31,7 +31,6 @@ module ViewHelpers
   def display_subhero_section
     @headline = select_home_content('SUBHERO', 'headline')
     @content = select_home_content('SUBHERO', 'content')
-    
 
     erb :"home/_subhero_section.html"
   end
