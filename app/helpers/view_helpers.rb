@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require_relative 'content_helpers.rb'
+
+require_relative 'content_helpers'
 
 module ViewHelpers
   include ContentHelpers
@@ -89,14 +90,13 @@ module ViewHelpers
   end
 
   def display_footer
-    @headers = select_layout_content('FOOTER', 'headings') 
-    @compliance = select_layout_content('FOOTER', 'compliance') 
+    @headers = select_layout_content('FOOTER', 'headings')
+    @compliance = select_layout_content('FOOTER', 'compliance')
 
     erb :"layout/_footer.html"
   end
 
   def display_head
-
     erb :"layout/_head.html"
   end
 
